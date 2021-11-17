@@ -1,0 +1,19 @@
+.traning {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background: #f3fbff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px gray;
+}
+.heading {
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+  background: #439bd2;
+  border-radius: 10px 10px 0 0;
+}
+.traning li a:hover {
+  color: #ffffff;
+  background: #439bd2;
+  border-bottom: none;
+}

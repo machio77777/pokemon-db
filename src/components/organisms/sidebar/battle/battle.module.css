@@ -1,0 +1,19 @@
+.battle {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background: #faf3ff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px gray;
+}
+.heading {
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+  background: #307DE2 linear-gradient(135deg, #307DE2, #EA3F82);
+  border-radius: 10px 10px 0 0;
+}
+.battle li a:hover {
+  color: #ffffff;
+  background: #6495ed;
+  border-bottom: none;
+}

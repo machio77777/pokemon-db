@@ -1,0 +1,19 @@
+.database {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px gray;
+}
+.heading {
+  padding: 5px;
+  text-align: center;
+  color: #ffffff;
+  background: #777;
+  border-radius: 10px 10px 0 0;
+}
+.database li a:hover {
+  color: #ffffff;
+  background: #777;
+  border-bottom: none;
+}
