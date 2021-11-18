@@ -1,0 +1,15 @@
+.youtuber {
+  width: 30%;
+  border: solid 1px#dcdcdc;
+}
+.list {
+  margin: 10px;
+  font-size: 15px;
+  list-style-type: none;
+}
+.list li {
+  margin-bottom: 5px;
+}
+.list li a img {
+  vertical-align: bottom;
+}
