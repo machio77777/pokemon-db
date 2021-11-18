@@ -6,7 +6,7 @@ interface Props {
 
 const H2 = (props: Props) => {
   return (
-  <h1 className={styles.heading}>{props.heading}</h1>
+    <h2 className={styles.heading}>{props.heading}</h2>
   )
 }
 
