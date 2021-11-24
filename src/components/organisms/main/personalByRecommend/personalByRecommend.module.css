@@ -1,0 +1,22 @@
+.table {
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 5px 15px;
+  text-align: center;
+  border: solid 1px #69c;
+}
+.tableColor {
+  background: #87c3e8;
+  color: #ffffff;
+}
+.emphasis {
+  color: #f66;
+  font-weight: bold;
+}
+.lecture td {
+  padding-left: 0;
+  text-align: left;
+  border: none;
+}

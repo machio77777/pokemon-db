@@ -26,7 +26,7 @@ const Ptypes = () => {
       <table className={styles.table}>
         <tr className={styles.tableColor}>
           <th colSpan={2} rowSpan={2}>&nbsp;</th>
-          <th colSpan={18} style={{ padding: `5px 0`, letterSpacing: `3px` }}>防御する側のポケモンのタイプ</th>
+          <th colSpan={18} style={{ padding: `10px 0`, letterSpacing: `3px` }}>防御する側のポケモンのタイプ</th>
         </tr>
         <tr>
           <td className={styles.normal}>ノ</td>
@@ -49,7 +49,7 @@ const Ptypes = () => {
           <td className={styles.fairy}>妖</td>
         </tr>
         <tr>
-          <th rowSpan={18} className={styles.tableColor} style={{ verticalAlign: `middle`, padding: `0 10px` }}>攻<br/>撃<br/>す<br/>る<br/>側<br/>の<br/>ポ<br/>ケ<br/>モ<br/>ン<br/>の<br/>タ<br/>イ<br/>プ</th>
+          <th rowSpan={18} className={styles.tableColor} style={{ verticalAlign: `middle`, padding: `0 15px` }}>攻<br/>撃<br/>す<br/>る<br/>側<br/>の<br/>ポ<br/>ケ<br/>モ<br/>ン<br/>の<br/>タ<br/>イ<br/>プ</th>
           <td className={styles.normal}>ノ</td>
           {drawTypes(types.normal)}
         </tr>

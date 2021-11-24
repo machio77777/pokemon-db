@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from 'components/templates/layout'
 import Personal from 'components/organisms/main/personal'
+import PersonalByRecommend from 'components/organisms/main/personalByRecommend'
 
 export default function Personality() {
   return (
@@ -10,6 +11,9 @@ export default function Personality() {
       </Head>
       <section>
         <Personal />
+      </section>
+      <section>
+        <PersonalByRecommend />
       </section>
     </Layout>
   )

@@ -1,22 +1,28 @@
 .table {
-  margin: 0 auto;
+  margin-bottom: 20px;
   border-collapse: collapse;
-}
-.table th {
-  padding: 5px;
   border: solid 1px #69c;
 }
-.table td {
-  padding: 5px 0;
+.table .topheader {
+  background: #ff8e8e;
+  color: #ffffff;
+}
+.table .topheader th {
+  width: 120px;
+}
+.table .sideheader {
+  width: 100px;
+  background: #8cb3cb;
+  color: #ffffff;
+}
+.table th, .table td {
+  padding: 5px;
   text-align: center;
   border: solid 1px #69c;
 }
 .tableColor {
   background: #87c3e8;
   color: #ffffff;
-}
-.personal {
-  background: #def;
 }
 .up {
   color: #f63;
