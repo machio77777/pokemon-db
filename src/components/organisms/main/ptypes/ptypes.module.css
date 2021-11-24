@@ -1,0 +1,87 @@
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.table td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: solid 1px hsl(203, 68%, 72%);
+}
+.tableColor {
+  background: #87c3e8;
+  color: #ffffff;
+}
+.normal {
+  background: #eee;
+}
+.flame {
+  background: #fde2e0;
+}
+.water {
+  background: #ddf1ff;
+}
+.electricity {
+  background: #f7eed3
+}
+.grass {
+  background: #e1f5d6;
+}
+.ice {
+  background: #d9f7f7;
+}
+.fighting {
+  background: #e6d9d8;
+}
+.poison {
+  background: #eadcec;
+}
+.ground {
+  background: #ece5d3
+}
+.flying {
+  background: #e2e5f5;
+}
+.esper {
+  background: #ecdbe2;
+}
+.insect {
+  background: #d6e0cc
+}
+.rock {
+  background: #e6e2d7;
+}
+.ghost {
+  background: #dbdbe8;
+}
+.dragon {
+  background: #d4d8e4;
+}
+.evil {
+  background: #e4dcd7;
+}
+.steel {
+  background: #dce4ea;
+}
+.fairy {
+  background: #ffe8f1;
+}
+.type1 {
+  color: #f63;
+}
+.type2 {
+  color: #69c;
+}
+.type3 {
+  font-size: 20px;
+}
+.lecture {
+  padding-top: 10px;
+  font-size: 18px;
+  text-align: left;
+}
+.lecture span:nth-of-type(2),
+.lecture span:nth-of-type(3),
+.lecture span:nth-of-type(4) {
+  margin-left: 20px;
+}
