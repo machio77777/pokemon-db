@@ -26,7 +26,7 @@ const Ptypes = () => {
       <table className={styles.table}>
         <tr className={styles.tableColor}>
           <th colSpan={2} rowSpan={2}>&nbsp;</th>
-          <th colSpan={18} style={{ padding: `5px 0`}}>防御する側のポケモンのタイプ</th>
+          <th colSpan={18} style={{ padding: `5px 0`, letterSpacing: `3px` }}>防御する側のポケモンのタイプ</th>
         </tr>
         <tr>
           <td className={styles.normal}>ノ</td>

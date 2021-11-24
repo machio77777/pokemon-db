@@ -7,7 +7,7 @@ const Database = () => {
   const alt  = 'heavy-ball'
   const rows = [
     { path: path, alt: alt, url: '/compatibility', name: 'タイプ相性表' },
-    { path: path, alt: alt, url: '/', name: '性格補正表' },
+    { path: path, alt: alt, url: '/personality',   name: '性格補正表' },
     { path: path, alt: alt, url: '/', name: 'すべての技リスト' },
     { path: path, alt: alt, url: '/', name: 'すべての特性リスト' },
   ]

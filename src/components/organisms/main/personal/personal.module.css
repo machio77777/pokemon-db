@@ -1,0 +1,28 @@
+.table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.table th {
+  padding: 5px;
+  border: solid 1px #69c;
+}
+.table td {
+  padding: 5px 0;
+  text-align: center;
+  border: solid 1px #69c;
+}
+.tableColor {
+  background: #87c3e8;
+  color: #ffffff;
+}
+.personal {
+  background: #def;
+}
+.up {
+  color: #f63;
+  font-weight: bold;
+}
+.down {
+  color: #69c;
+  font-size: 18px;
+}

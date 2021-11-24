@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Layout from 'components/templates/layout'
-import Ptypes from 'components/organisms/main/ptypes'
+import Personal from 'components/organisms/main/personal'
 
-export default function Types() {
+export default function Personality() {
   return (
     <Layout>
       <Head>
-        <title>タイプ相性表</title>
+        <title>性格補正表</title>
       </Head>
       <section>
-        <Ptypes />
+        <Personal />
       </section>
     </Layout>
   )
