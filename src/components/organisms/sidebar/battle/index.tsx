@@ -6,9 +6,9 @@ const Battle = () => {
   const path = '/pokemon-icon/master-ball.png'
   const alt  = 'master-ball'
   const rows = [
-    { path: path, alt: alt, url: '/', name: 'ボックス管理' },
-    { path: path, alt: alt, url: '/', name: 'パーティー考察' },
-    { path: path, alt: alt, url: '/', name: '戦術考察' },
+    { path: path, alt: alt, url: '/mybox',    name: 'ボックス管理' },
+    { path: path, alt: alt, url: '/party',    name: 'パーティー考察' },
+    { path: path, alt: alt, url: '/strategy', name: '戦術考察' },
   ]
   return (
     <div className={styles.battle}>

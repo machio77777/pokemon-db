@@ -1,4 +1,8 @@
 .heading {
-  margin-bottom: 20px;
-  padding: 5px;
+  margin-bottom: 40px;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 5px;
 }

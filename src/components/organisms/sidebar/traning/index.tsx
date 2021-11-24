@@ -6,9 +6,9 @@ const Traning = () => {
   const path = '/pokemon-icon/super-ball.png'
   const alt  = 'super-ball'
   const rows = [
-    { path: path, alt: alt, url: '/', name: 'ステータス計算' },
-    { path: path, alt: alt, url: '/', name: 'ダメージ計算（単体）' },
-    { path: path, alt: alt, url: '/', name: 'ダメージ計算（複数）' },
+    { path: path, alt: alt, url: '/calcureteStatus',       name: 'ステータス計算' },
+    { path: path, alt: alt, url: '/calcureteDamageSingle', name: 'ダメージ計算（単体）' },
+    { path: path, alt: alt, url: '/calcureteDamageDouble', name: 'ダメージ計算（複数）' },
   ]
   return (
     <div className={styles.traning}>

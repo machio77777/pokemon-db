@@ -1,8 +1,8 @@
 .library {
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
   padding-bottom: 10px;
   background: #fff3f3;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 2px 2px 4px gray;
 }
 .heading {
@@ -10,7 +10,7 @@
   text-align: center;
   color: #ffffff;
   background: #ef5b5b;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 .library li a:hover {
   color: #ffffff;

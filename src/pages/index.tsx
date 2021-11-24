@@ -1,9 +1,13 @@
+import Head from 'next/head'
 import Layout from 'components/templates/layout'
 
 export default function Home() {
   return (
     <Layout>
-      <p>index.tsx</p>
+      <Head>
+        <title>トップページ</title>
+      </Head>
+      <p>（準備中）</p>
     </Layout>
   )
 }

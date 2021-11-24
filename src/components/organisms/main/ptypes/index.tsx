@@ -1,3 +1,4 @@
+import H1 from 'components/atoms/h1'
 import styles from './ptypes.module.css'
 
 const Ptypes = () => {
@@ -23,6 +24,7 @@ const Ptypes = () => {
   }
   return (
     <>
+      <p>ダイパリメイク、ソードアンドシールド、サンムーン、XY/ORAS、および、ポケモンGOにおけるタイプ相性表。</p>
       <table className={styles.table}>
         <tr className={styles.tableColor}>
           <th colSpan={2} rowSpan={2}>&nbsp;</th>

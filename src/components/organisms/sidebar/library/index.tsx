@@ -6,9 +6,9 @@ const Library = () => {
   const path = '/pokemon-icon/monster-ball.png'
   const alt  = 'monster-ball'
   const rows = [
-    { path: path, alt: alt, url: '/', name: 'ガラル図鑑ソードシールド' },
-    { path: path, alt: alt, url: '/', name: 'ガラル地方のポケモン一覧' },
-    { path: path, alt: alt, url: '/', name: '種族値ランキング' },
+    { path: path, alt: alt, url: '/zukan',            name: 'ガラル図鑑ソードシールド' },
+    { path: path, alt: alt, url: '/pokemons',         name: 'ガラル地方のポケモン一覧' },
+    { path: path, alt: alt, url: '/rankingRaceValue', name: '種族値ランキング' },
   ]
   return (
     <div className={styles.library}>
