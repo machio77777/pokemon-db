@@ -1,7 +1,26 @@
-import H1 from 'components/atoms/h1'
 import styles from './ptypes.module.css'
 
 const Ptypes = () => {
+  const headers = [
+    ['normal', 'ノ'],
+    ['flame', '炎'],
+    ['water', '水'],
+    ['electricity', '電'],
+    ['grass', '草'],
+    ['ice', '氷'],
+    ['fighting', '格'],
+    ['poison', '毒'],
+    ['ground', '地'],
+    ['flying', '飛'],
+    ['esper', '超'],
+    ['insect', '虫'],
+    ['rock', '岩'],
+    ['ghost', '霊'],
+    ['dragon', '竜'],
+    ['evil', '悪'],
+    ['steel', '鋼'],
+    ['fairy', '妖']
+  ]
   const types = {
     'normal'     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0, 0, 2, 0], // ノーマル
     'flame'      : [0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 1, 2, 0, 2, 0, 1, 0], // 炎
@@ -28,99 +47,86 @@ const Ptypes = () => {
       <table className={styles.table}>
         <tr className={styles.tableColor}>
           <th colSpan={2} rowSpan={2}>&nbsp;</th>
-          <th colSpan={18} style={{ padding: `10px 0`, letterSpacing: `3px` }}>防御する側のポケモンのタイプ</th>
+          <th colSpan={18} className={styles.dTypes}>防御する側のポケモンのタイプ</th>
         </tr>
         <tr>
-          <td className={styles.normal}>ノ</td>
-          <td className={styles.flame}>炎</td>
-          <td className={styles.water}>水</td>
-          <td className={styles.electricity}>電</td>
-          <td className={styles.grass}>草</td>
-          <td className={styles.ice}>氷</td>
-          <td className={styles.fighting}>格</td>
-          <td className={styles.poison}>毒</td>
-          <td className={styles.ground}>地</td>
-          <td className={styles.flying}>飛</td>
-          <td className={styles.esper}>超</td>
-          <td className={styles.insect}>虫</td>
-          <td className={styles.rock}>岩</td>
-          <td className={styles.ghost}>霊</td>
-          <td className={styles.dragon}>竜</td>
-          <td className={styles.evil}>悪</td>
-          <td className={styles.steel}>鋼</td>
-          <td className={styles.fairy}>妖</td>
+          {headers.map((header, index) => {
+            return (
+              <td className={header[0]} key={index}>{header[1]}</td>
+            )
+          })}
         </tr>
         <tr>
-          <th rowSpan={18} className={styles.tableColor} style={{ verticalAlign: `middle`, padding: `0 15px` }}>攻<br/>撃<br/>す<br/>る<br/>側<br/>の<br/>ポ<br/>ケ<br/>モ<br/>ン<br/>の<br/>タ<br/>イ<br/>プ</th>
-          <td className={styles.normal}>ノ</td>
+          <th rowSpan={18} className={styles.aTypes}>攻<br/>撃<br/>す<br/>る<br/>側<br/>の<br/>ポ<br/>ケ<br/>モ<br/>ン<br/>の<br/>タ<br/>イ<br/>プ</th>
+          <td className='normal'>ノ</td>
           {drawTypes(types.normal)}
         </tr>
         <tr>
-          <td className={styles.flame}>炎</td>
+          <td className='flame'>炎</td>
           {drawTypes(types.flame)}
         </tr>
         <tr>
-          <td className={styles.water}>水</td>
+          <td className='water'>水</td>
           {drawTypes(types.water)}
         </tr>
         <tr>
-          <td className={styles.electricity}>電</td>
+          <td className='electricity'>電</td>
           {drawTypes(types.electricity)}
         </tr>
         <tr>
-          <td className={styles.grass}>草</td>
+          <td className='grass'>草</td>
           {drawTypes(types.grass)}
         </tr>
         <tr>
-          <td className={styles.ice}>氷</td>
+          <td className='ice'>氷</td>
           {drawTypes(types.ice)}
         </tr>
         <tr>
-          <td className={styles.fighting}>格</td>
+          <td className='fighting'>格</td>
           {drawTypes(types.fighting)}
         </tr>
         <tr>
-          <td className={styles.poison}>毒</td>
+          <td className='poison'>毒</td>
           {drawTypes(types.poison)}
         </tr>
         <tr>
-          <td className={styles.ground}>地</td>
+          <td className='ground'>地</td>
           {drawTypes(types.ground)}
         </tr>
         <tr>
-          <td className={styles.flying}>飛</td>
+          <td className='flying'>飛</td>
           {drawTypes(types.flying)}
         </tr>
         <tr>
-          <td className={styles.esper}>超</td>
+          <td className='esper'>超</td>
           {drawTypes(types.esper)}
         </tr>
         <tr>
-          <td className={styles.insect}>虫</td>
+          <td className='insect'>虫</td>
           {drawTypes(types.insect)}
         </tr>
         <tr>
-          <td className={styles.rock}>岩</td>
+          <td className='rock'>岩</td>
           {drawTypes(types.rock)}
         </tr>
         <tr>
-          <td className={styles.ghost}>霊</td>
+          <td className='ghost'>霊</td>
           {drawTypes(types.ghost)}
         </tr>
         <tr>
-          <td className={styles.dragon}>竜</td>
+          <td className='dragon'>竜</td>
           {drawTypes(types.dragon)}
         </tr>
         <tr>
-          <td className={styles.evil}>悪</td>
+          <td className='evil'>悪</td>
           {drawTypes(types.evil)}
         </tr>
         <tr>
-          <td className={styles.steel}>鋼</td>
+          <td className='steel'>鋼</td>
           {drawTypes(types.steel)}
         </tr>
         <tr>
-          <td className={styles.fairy}>妖</td>
+          <td className='fairy'>妖</td>
           {drawTypes(types.fairy)}
         </tr>
         <tr>

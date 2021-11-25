@@ -1,0 +1,32 @@
+.table {
+  margin: 15px auto;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table th {
+  padding: 5px 0;
+  color: #ffffff;
+  background: #87c3e8;
+  border: solid 1px #69c;
+}
+.table td {
+  padding: 3px 5px;
+  text-align: center;
+  border: solid 1px #69c;
+}
+.tableColor {
+  background: #87c3e8;
+  color: #ffffff;
+}
+
+.name {
+  width: 20%;
+}
+.type, .classifying, .power, .dai, .hit, .pp, .direct, .defence {
+  width: 10%;
+}
+.skillType span {
+  padding: 4px 7px;
+  font-size: 12px;
+  border-radius: 3px;
+}

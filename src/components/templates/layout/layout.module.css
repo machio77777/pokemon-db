@@ -9,3 +9,9 @@
 .paper main {
   margin: 10px 35px;
 }
+
+@media screen and (max-width : 414px) {
+  .paper main {
+    margin: 10px;
+  }
+}

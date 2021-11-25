@@ -23,3 +23,58 @@ a {
 a:hover {
   color: #ff69b4;
 }
+
+.normal {
+  background: #eee;
+}
+.flame {
+  background: #fde2e0;
+}
+.water {
+  background: #ddf1ff;
+}
+.electricity {
+  background: #f7eed3
+}
+.grass {
+  background: #e1f5d6;
+}
+.ice {
+  background: #d9f7f7;
+}
+.fighting {
+  background: #e6d9d8;
+}
+.poison {
+  background: #eadcec;
+}
+.ground {
+  background: #ece5d3
+}
+.flying {
+  background: #e2e5f5;
+}
+.esper {
+  background: #ecdbe2;
+}
+.insect {
+  background: #d6e0cc
+}
+.rock {
+  background: #e6e2d7;
+}
+.ghost {
+  background: #dbdbe8;
+}
+.dragon {
+  background: #d4d8e4;
+}
+.evil {
+  background: #e4dcd7;
+}
+.steel {
+  background: #dce4ea;
+}
+.fairy {
+  background: #ffe8f1;
+}
