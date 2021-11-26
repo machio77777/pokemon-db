@@ -2,7 +2,6 @@ import List from 'components/molecules/list'
 import styles from './database.module.css'
 
 const Database = () => {
-
   const path = '/pokemon-icon/heavy-ball.png'
   const alt  = 'heavy-ball'
   const rows = [

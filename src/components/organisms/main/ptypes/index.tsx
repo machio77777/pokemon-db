@@ -1,46 +1,27 @@
+import { TYPE_KEY, TYPE_NAME_OMIT } from 'utils/commonType'
 import styles from './ptypes.module.css'
 
 const Ptypes = () => {
-  const headers = [
-    ['normal', 'ノ'],
-    ['flame', '炎'],
-    ['water', '水'],
-    ['electricity', '電'],
-    ['grass', '草'],
-    ['ice', '氷'],
-    ['fighting', '格'],
-    ['poison', '毒'],
-    ['ground', '地'],
-    ['flying', '飛'],
-    ['esper', '超'],
-    ['insect', '虫'],
-    ['rock', '岩'],
-    ['ghost', '霊'],
-    ['dragon', '竜'],
-    ['evil', '悪'],
-    ['steel', '鋼'],
-    ['fairy', '妖']
+  const types = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0, 0, 2, 0], // ノーマル
+    [0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 1, 2, 0, 2, 0, 1, 0], // 炎
+    [0, 1, 2, 0, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0], // 水
+    [0, 0, 1, 2, 2, 0, 0, 0, 3, 1, 0, 0, 0, 0, 2, 0, 0, 0], // 電
+    [0, 2, 1, 0, 2, 0, 0, 2, 1, 2, 0, 2, 1, 0, 2, 0, 0, 0], // 草
+    [0, 2, 2, 0, 1, 2, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 2, 0], // 氷
+    [1, 0, 0, 0, 0, 1, 0, 2, 0, 2, 2, 2, 1, 3, 0, 1, 1, 2], // 格
+    [0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 0, 0, 2, 2, 0, 0, 3, 1], // 毒
+    [0, 1, 0, 1, 2, 0, 0, 1, 0, 3, 0, 2, 1, 0, 0, 0, 1, 0], // 地
+    [0, 0, 0, 2, 1, 0, 1, 0, 0, 0, 0, 1, 2, 0, 0, 0, 2, 0], // 飛
+    [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 2, 0, 0, 0, 0, 3, 2, 0], // 超
+    [0, 2, 0, 0, 1, 0, 2, 2, 0, 2, 1, 0, 0, 2, 0, 1, 2, 2], // 虫
+    [0, 1, 0, 0, 0, 1, 2, 0, 2, 1, 0, 1, 0, 0, 0, 0, 2, 0], // 岩
+    [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 2, 0, 0], // 霊
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 3], // 竜
+    [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 1, 0, 2, 0, 2], // 悪
+    [0, 2, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1], // 鋼
+    [0, 2, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 1, 1, 2, 0], // 妖
   ]
-  const types = {
-    'normal'     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 0, 0, 2, 0], // ノーマル
-    'flame'      : [0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 1, 2, 0, 2, 0, 1, 0], // 炎
-    'water'      : [0, 1, 2, 0, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0], // 水
-    'electricity': [0, 0, 1, 2, 2, 0, 0, 0, 3, 1, 0, 0, 0, 0, 2, 0, 0, 0], // 電
-    'grass'      : [0, 2, 1, 0, 2, 0, 0, 2, 1, 2, 0, 2, 1, 0, 2, 0, 0, 0], // 草
-    'ice'        : [0, 2, 2, 0, 1, 2, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 2, 0], // 氷
-    'fighting'   : [1, 0, 0, 0, 0, 1, 0, 2, 0, 2, 2, 2, 1, 3, 0, 1, 1, 2], // 格
-    'poison'     : [0, 0, 0, 0, 1, 0, 0, 2, 2, 0, 0, 0, 2, 2, 0, 0, 3, 1], // 毒
-    'ground'     : [0, 1, 0, 1, 2, 0, 0, 1, 0, 3, 0, 2, 1, 0, 0, 0, 1, 0], // 地
-    'flying'     : [0, 0, 0, 2, 1, 0, 1, 0, 0, 0, 0, 1, 2, 0, 0, 0, 2, 0], // 飛
-    'esper'      : [0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 2, 0, 0, 0, 0, 3, 2, 0], // 超
-    'insect'     : [0, 2, 0, 0, 1, 0, 2, 2, 0, 2, 1, 0, 0, 2, 0, 1, 2, 2], // 虫
-    'rock'       : [0, 1, 0, 0, 0, 1, 2, 0, 2, 1, 0, 1, 0, 0, 0, 0, 2, 0], // 岩
-    'ghost'      : [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 2, 0, 0], // 霊
-    'dragon'     : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 3], // 竜
-    'evil'       : [0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 1, 0, 2, 0, 2], // 悪
-    'steel'      : [0, 2, 2, 2, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1], // 鋼
-    'fairy'      : [0, 2, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 1, 1, 2, 0], // 妖
-  }
   return (
     <>
       <p>ダイパリメイク、ソードアンドシールド、サンムーン、XY/ORAS、および、ポケモンGOにおけるタイプ相性表。</p>
@@ -50,84 +31,97 @@ const Ptypes = () => {
           <th colSpan={18} className={styles.dTypes}>防御する側のポケモンのタイプ</th>
         </tr>
         <tr>
-          {headers.map((header, index) => {
-            return (
-              <td className={header[0]} key={index}>{header[1]}</td>
-            )
-          })}
+          <td className={TYPE_KEY.NORMAL}>{TYPE_NAME_OMIT.NORMAL}</td>
+          <td className={TYPE_KEY.FLAME}>{TYPE_NAME_OMIT.FLAME}</td>
+          <td className={TYPE_KEY.WATER}>{TYPE_NAME_OMIT.WATER}</td>
+          <td className={TYPE_KEY.ELECTRICITY}>{TYPE_NAME_OMIT.ELECTRICITY}</td>
+          <td className={TYPE_KEY.GRASS}>{TYPE_NAME_OMIT.GRASS}</td>
+          <td className={TYPE_KEY.ICE}>{TYPE_NAME_OMIT.ICE}</td>
+          <td className={TYPE_KEY.FIGHTING}>{TYPE_NAME_OMIT.FLYING}</td>
+          <td className={TYPE_KEY.POISON}>{TYPE_NAME_OMIT.POISON}</td>
+          <td className={TYPE_KEY.GROUND}>{TYPE_NAME_OMIT.GROUND}</td>
+          <td className={TYPE_KEY.FLYING}>{TYPE_NAME_OMIT.FLYING}</td>
+          <td className={TYPE_KEY.ESPER}>{TYPE_NAME_OMIT.ESPER}</td>
+          <td className={TYPE_KEY.INSECT}>{TYPE_NAME_OMIT.INSECT}</td>
+          <td className={TYPE_KEY.ROCK}>{TYPE_NAME_OMIT.ROCK}</td>
+          <td className={TYPE_KEY.GHOST}>{TYPE_NAME_OMIT.GHOST}</td>
+          <td className={TYPE_KEY.DRAGON}>{TYPE_NAME_OMIT.DRAGON}</td>
+          <td className={TYPE_KEY.EVIL}>{TYPE_NAME_OMIT.EVIL}</td>
+          <td className={TYPE_KEY.STEEL}>{TYPE_NAME_OMIT.STEEL}</td>
+          <td className={TYPE_KEY.FAIRY}>{TYPE_NAME_OMIT.FAIRY}</td>
         </tr>
         <tr>
           <th rowSpan={18} className={styles.aTypes}>攻<br/>撃<br/>す<br/>る<br/>側<br/>の<br/>ポ<br/>ケ<br/>モ<br/>ン<br/>の<br/>タ<br/>イ<br/>プ</th>
-          <td className='normal'>ノ</td>
-          {drawTypes(types.normal)}
+          <td className={TYPE_KEY.NORMAL}>{TYPE_NAME_OMIT.NORMAL}</td>
+          {drawTypes(types[0])}
         </tr>
         <tr>
-          <td className='flame'>炎</td>
-          {drawTypes(types.flame)}
+          <td className={TYPE_KEY.FLAME}>{TYPE_NAME_OMIT.FLAME}</td>
+          {drawTypes(types[1])}
         </tr>
         <tr>
-          <td className='water'>水</td>
-          {drawTypes(types.water)}
+          <td className={TYPE_KEY.WATER}>{TYPE_NAME_OMIT.WATER}</td>
+          {drawTypes(types[2])}
         </tr>
         <tr>
-          <td className='electricity'>電</td>
-          {drawTypes(types.electricity)}
+          <td className={TYPE_KEY.ELECTRICITY}>{TYPE_NAME_OMIT.ELECTRICITY}</td>
+          {drawTypes(types[3])}
         </tr>
         <tr>
-          <td className='grass'>草</td>
-          {drawTypes(types.grass)}
+          <td className={TYPE_KEY.GRASS}>{TYPE_NAME_OMIT.GRASS}</td>
+          {drawTypes(types[4])}
         </tr>
         <tr>
-          <td className='ice'>氷</td>
-          {drawTypes(types.ice)}
+          <td className={TYPE_KEY.ICE}>{TYPE_NAME_OMIT.ICE}</td>
+          {drawTypes(types[5])}
         </tr>
         <tr>
-          <td className='fighting'>格</td>
-          {drawTypes(types.fighting)}
+          <td className={TYPE_KEY.FIGHTING}>{TYPE_NAME_OMIT.FIGHTING}</td>
+          {drawTypes(types[6])}
         </tr>
         <tr>
-          <td className='poison'>毒</td>
-          {drawTypes(types.poison)}
+          <td className={TYPE_KEY.POISON}>{TYPE_NAME_OMIT.POISON}</td>
+          {drawTypes(types[7])}
         </tr>
         <tr>
-          <td className='ground'>地</td>
-          {drawTypes(types.ground)}
+          <td className={TYPE_KEY.GROUND}>{TYPE_NAME_OMIT.GROUND}</td>
+          {drawTypes(types[8])}
         </tr>
         <tr>
-          <td className='flying'>飛</td>
-          {drawTypes(types.flying)}
+          <td className={TYPE_KEY.FLYING}>{TYPE_NAME_OMIT.FLYING}</td>
+          {drawTypes(types[9])}
         </tr>
         <tr>
-          <td className='esper'>超</td>
-          {drawTypes(types.esper)}
+          <td className={TYPE_KEY.ESPER}>{TYPE_NAME_OMIT.ESPER}</td>
+          {drawTypes(types[10])}
         </tr>
         <tr>
-          <td className='insect'>虫</td>
-          {drawTypes(types.insect)}
+          <td className={TYPE_KEY.INSECT}>{TYPE_NAME_OMIT.INSECT}</td>
+          {drawTypes(types[11])}
         </tr>
         <tr>
-          <td className='rock'>岩</td>
-          {drawTypes(types.rock)}
+          <td className={TYPE_KEY.ROCK}>{TYPE_NAME_OMIT.ROCK}</td>
+          {drawTypes(types[12])}
         </tr>
         <tr>
-          <td className='ghost'>霊</td>
-          {drawTypes(types.ghost)}
+          <td className={TYPE_KEY.GHOST}>{TYPE_NAME_OMIT.GHOST}</td>
+          {drawTypes(types[13])}
         </tr>
         <tr>
-          <td className='dragon'>竜</td>
-          {drawTypes(types.dragon)}
+          <td className={TYPE_KEY.DRAGON}>{TYPE_NAME_OMIT.DRAGON}</td>
+          {drawTypes(types[14])}
         </tr>
         <tr>
-          <td className='evil'>悪</td>
-          {drawTypes(types.evil)}
+          <td className={TYPE_KEY.EVIL}>{TYPE_NAME_OMIT.EVIL}</td>
+          {drawTypes(types[15])}
         </tr>
         <tr>
-          <td className='steel'>鋼</td>
-          {drawTypes(types.steel)}
+          <td className={TYPE_KEY.STEEL}>{TYPE_NAME_OMIT.STEEL}</td>
+          {drawTypes(types[16])}
         </tr>
         <tr>
-          <td className='fairy'>妖</td>
-          {drawTypes(types.fairy)}
+          <td className={TYPE_KEY.FAIRY}>{TYPE_NAME_OMIT.FAIRY}</td>
+          {drawTypes(types[17])}
         </tr>
         <tr>
           <th colSpan={20} className={styles.lecture}>

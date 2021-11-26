@@ -2,7 +2,6 @@ import List from 'components/molecules/list'
 import styles from './battle.module.css'
 
 const Battle = () => {
-
   const path = '/pokemon-icon/master-ball.png'
   const alt  = 'master-ball'
   const rows = [

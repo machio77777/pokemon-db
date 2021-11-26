@@ -2,7 +2,6 @@ import List from 'components/molecules/list'
 import styles from './traning.module.css'
 
 const Traning = () => {
-
   const path = '/pokemon-icon/super-ball.png'
   const alt  = 'super-ball'
   const rows = [

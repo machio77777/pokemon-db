@@ -2,7 +2,6 @@ import List from 'components/molecules/list'
 import styles from './library.module.css'
 
 const Library = () => {
-
   const path = '/pokemon-icon/monster-ball.png'
   const alt  = 'monster-ball'
   const rows = [
