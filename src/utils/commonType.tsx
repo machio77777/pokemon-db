@@ -58,3 +58,10 @@ export const TYPE_NAME_OMIT = {
   STEEL       : '鋼',
   FAIRY       : '妖'
 }
+
+export const replaceTypeName = (name: string) => {
+  const result = Object.keys(TYPE_NAME).filter((key) => {
+    return TYPE_NAME[key] === name
+  })
+  return result[0]
+}

@@ -25,6 +25,7 @@
 }
 .table {
   margin: 15px auto;
+  width: 100%;
   border-collapse: collapse;
   font-size: 14px;
 }
@@ -35,7 +36,7 @@
   border: solid 1px #69c;
 }
 .table td {
-  padding: 3px 5px;
+  padding: 5px;
   text-align: center;
   border: solid 1px #69c;
 }
@@ -43,12 +44,14 @@
   background: #87c3e8;
   color: #ffffff;
 }
-
 .name {
-  width: 20%;
+  width: 24%;
 }
-.type, .classifying, .power, .dai, .hit, .pp, .direct, .defence {
-  width: 10%;
+.type {
+  width: 13%;
+}
+.classifying, .power, .dai, .hit, .pp, .direct, .defence {
+  width: 9%;
 }
 .skillType span {
   padding: 4px 7px;

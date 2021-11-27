@@ -1,22 +1,28 @@
+import Link from 'next/link'
+import { TYPE_KEY, TYPE_NAME, replaceTypeName } from 'utils/commonType'
 import styles from './skillList.module.css'
 
+interface skill {
+  name: string,
+  type: string,
+  classifying: string,
+  power: number | string,
+  dai: number | string,
+  hit: number | string,
+  pp: number,
+  direct: number,
+  defence: number,
+  target: string,
+  lecture: string
+}
 interface Props {
-  rows: {
-    name: string,
-    type: string,
-    classifying: string,
-    power: number | string,
-    dai: number | string,
-    hit: number | string,
-    pp: number,
-    direct: number,
-    defence: number,
-    target: string,
-    lecture: string
-  }[]
+  rows: skill[]
 }
 
 const SkillList = (props: Props) => {
+
+  const initial = ['すべて', 'あ', 'か', 'さ', 'た', 'な', 'は', 'ま', 'や', 'ら', 'わ']
+  const classification = ['すべて', '変化', '物理', '特殊']
 
   return (
     <>
@@ -25,117 +31,88 @@ const SkillList = (props: Props) => {
         <div>
           <p>頭文字</p>
           <ul style={{ marginTop: `10px` }}>
-            <li>すべて</li>
-            <li>あ</li>
-            <li>か</li>
-            <li>さ</li>
-            <li>た</li>
-            <li>な</li>
-            <li>は</li>
-            <li>ま</li>
-            <li>や</li>
-            <li>ら</li>
-            <li>わ</li>
+            {initial.map((row, index) => {
+              return (
+                <li key={index}>{row}</li>
+              )
+            })}
           </ul>
         </div>
         <div>
           <p>タイプ</p>
           <ul style={{ marginTop: `10px` }}>
             <li>すべて</li>
-            <li className='normal'>ノーマル</li>
-            <li className='flame'>ほのお</li>
-            <li className='water'>みず</li>
-            <li className='electricity'>でんき</li>
-            <li className='grass'>くさ</li>
-            <li className='ice'>こおり</li>
-            <li className='fighting'>かくとう</li>
-            <li className='poison'>どく</li>
-            <li className='ground'>じめん</li>
-            <li className='flying'>ひこう</li>
-            <li className='esper'>エスパー</li>
-            <li className='insect'>むし</li>
-            <li className='rock'>いわ</li>
-            <li className='ghost'>ゴースト</li>
-            <li className='dragon'>ドラゴン</li>
-            <li className='evil'>あく</li>
-            <li className='steel'>はがね</li>
-            <li className='fairy'>フェアリー</li>
+            <li className={TYPE_KEY.NORMAL}>{TYPE_NAME.NORMAL}</li>
+            <li className={TYPE_KEY.FLAME}>{TYPE_NAME.FLAME}</li>
+            <li className={TYPE_KEY.WATER}>{TYPE_NAME.WATER}</li>
+            <li className={TYPE_KEY.ELECTRICITY}>{TYPE_NAME.ELECTRICITY}</li>
+            <li className={TYPE_KEY.GRASS}>{TYPE_NAME.GRASS}</li>
+            <li className={TYPE_KEY.ICE}>{TYPE_NAME.ICE}</li>
+            <li className={TYPE_KEY.FIGHTING}>{TYPE_NAME.FIGHTING}</li>
+            <li className={TYPE_KEY.POISON}>{TYPE_NAME.POISON}</li>
+            <li className={TYPE_KEY.GROUND}>{TYPE_NAME.GROUND}</li>
+            <li className={TYPE_KEY.FLYING}>{TYPE_NAME.FLYING}</li>
+            <li className={TYPE_KEY.ESPER}>{TYPE_NAME.ESPER}</li>
+            <li className={TYPE_KEY.INSECT}>{TYPE_NAME.INSECT}</li>
+            <li className={TYPE_KEY.ROCK}>{TYPE_NAME.ROCK}</li>
+            <li className={TYPE_KEY.GHOST}>{TYPE_NAME.GHOST}</li>
+            <li className={TYPE_KEY.DRAGON}>{TYPE_NAME.DRAGON}</li>
+            <li className={TYPE_KEY.EVIL}>{TYPE_NAME.EVIL}</li>
+            <li className={TYPE_KEY.STEEL}>{TYPE_NAME.STEEL}</li>
+            <li className={TYPE_KEY.FAIRY}>{TYPE_NAME.FAIRY}</li>
           </ul>
         </div>
         <div>
           <p>分類</p>
           <ul style={{ marginTop: `10px` }}>
-            <li>すべて</li>
-            <li>変化</li>
-            <li>物理</li>
-            <li>特殊</li>
+            {classification.map((row, index) => {
+              return (
+                <li key={index}>{row}</li>
+              )
+            })}
           </ul>
         </div>
       </nav>
       <table className={styles.table}>
-        <tr>
-          <th className={styles.name}>名前</th>
-          <th className={styles.type}>タイプ</th>
-          <th className={styles.classifying}>分類</th>
-          <th className={styles.power}>威力</th>
-          <th className={styles.dai}>ダイ</th>
-          <th className={styles.hit}>命中</th>
-          <th className={styles.pp}>PP</th>
-          <th className={styles.direct}>直</th>
-          <th className={styles.defence}>守</th>
-        </tr>
-        <tr>
-          <th>対象</th>
-          <th colSpan={8}>説明</th>
-        </tr>
+        <thead>
+          <tr>
+            <th className={styles.name}>名前</th>
+            <th className={styles.type}>タイプ</th>
+            <th className={styles.classifying}>分類</th>
+            <th className={styles.power}>威力</th>
+            <th className={styles.dai}>ダイ</th>
+            <th className={styles.hit}>命中</th>
+            <th className={styles.pp}>PP</th>
+            <th className={styles.direct}>直</th>
+            <th className={styles.defence}>守</th>
+          </tr>
+        </thead>
+        <tbody>
         {props.rows.map((row, index) => {
           return (
-            <>
-              <tr key={index} style={{ borderTop: `solid 3px #69c` }}>
-                <td>{row.name}</td>
-                <td className={styles.skillType}>{drawType(row.type)}</td>
-                <td>{row.classifying}</td>
-                <td>{row.power}</td>
-                <td>{row.dai}</td>
-                <td>{row.hit}</td>
-                <td>{row.pp}</td>
-                <td>{drawDirect(row.direct)}</td>
-                <td>{drawDefence(row.defence)}</td>
-              </tr>
-              <tr key={index}>
-                <td>{row.target}</td>
-                <td colSpan={8} style={{ textAlign: `left` }}>{row.lecture}</td>
-              </tr>
-            </>
+            <tr key={index}>
+              <td>
+                <Link href='/'><a>{row.name}</a></Link>
+              </td>
+              <td className={styles.skillType}>{drawType(row.type)}</td>
+              <td>{row.classifying}</td>
+              <td>{row.power}</td>
+              <td>{row.dai}</td>
+              <td>{row.hit}</td>
+              <td>{row.pp}</td>
+              <td>{drawDirect(row.direct)}</td>
+              <td>{drawDefence(row.defence)}</td>
+            </tr>
           )
         })}
+        </tbody>
       </table>
     </>
   )
 }
 
 const drawType = (type: string) => {
-  const types = {
-    'ノーマル' : 'normal',
-    'ほのお' : 'flame',
-    'みず' : 'water',
-    'でんき' : 'electricity',
-    'くさ' : 'grass',
-    'こおり' : 'ice',
-    'かくとう' : 'fighting',
-    'どく' : 'poison',
-    'じめん' : 'ground',
-    'ひこう' : 'flying',
-    'エスパー' : 'esper',
-    'むし' : 'insect',
-    'いわ' : 'rock',
-    'ゴースト' : 'ghost',
-    'ドラゴン' : 'dragon',
-    'あく' : 'evil',
-    'はがね' : 'steel',
-    'フェアリー' : 'fairy'
-  }
-  return <span className={types[type]}>{type}</span>
+  return <span className={TYPE_KEY[replaceTypeName(type)]}>{type}</span>
 }
 
 const drawDirect = (direct: number) => {
